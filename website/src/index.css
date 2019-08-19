@@ -14,13 +14,35 @@
    background-image: url('./images/space_background.jpg');
 }
 
-.main {
+.bgc {
   background-color: #151515;
+}
+
+.video {
+  position: relative;
+  min-width: 50%;
+  min-height: 50%;
+  width: auto;
+  height: auto;
+  z-index:0;
+}
+
+.overlay {
+  position: absolute;
+  z-index:1;
 }
 
 .header-title {
   color: #f7f7f7;
   font-size: 3.25rem;
+}
+
+.text-outline {
+  text-shadow:
+  -1px -1px 0 #00000080,
+  1px -1px 0 #00000080,
+  -1px 1px 0 #00000080,
+  1px 1px 0 #00000080;
 }
 
 .site-header {
