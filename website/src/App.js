@@ -1,34 +1,42 @@
 import React from 'react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import './index.css'
+import emblem from './images/GCC_Emblem.png'
 import Main from './Main'
+import About from './About'
 
 function App() {
   return (
-    <div className="App bgc">
-      <nav className="site-header sticky-top mx-auto">
-        <div className="container d-flex flex-column flex-md-row justify-content-around">
-          <a className="py-2 d-none d-md-inline-block" href="#">Home</a>
-          <a className="py-2 d-none d-md-inline-block" href="#">About</a>
-          <a className="py-2 d-none d-md-inline-block" href="#">Catalogue</a>
-        </div>
-      </nav>
-      <Main/>
-      <footer className="container py-5 bgc">
-        <div className="row">
-          <div className="col-6 col-md">
-            <small className="d-block mb-3 text-muted">© 2019</small>
+    <Router>
+      <div className="App bgc">
+        <nav className="site-header sticky-top mx-auto">
+          <div className="container d-flex flex-column flex-md-row justify-content-around">
+            <Link className="py-2" to="/">Home</Link>
+            <Link className="py-2" to="/about/">About</Link>
+            <Link className="py-2" to="#">Catalogue</Link>
           </div>
-          <div className="col-6 col-md">
-            <h5 className="text-muted">Contact</h5>
-            <ul className="list-unstyled text-small">
-              <li><a className="text-muted" href="#">service@galacticcommercecorportation.com</a></li>
-            </ul>
+        </nav>
+        <Route path="/" exact component={Main} />
+        <Route path="/about/" exact component={About} />
+        <Route path="/catalogue/" exact component={Main} />
+        <footer className="container py-5 bgc">
+          <div className="row">
+            <div className="col-6 col-md">
+              <img src={emblem} className="footer-logo" alt="Emblem"/>
+              <small className="d-block mb-3 text-muted">© 2019</small>
+            </div>
+            <div className="col-6 col-md">
+              <h5 className="text-muted">Contact</h5>
+              <ul className="list-unstyled text-small">
+                <li><a className="text-muted" href="#">service@galacticcommercecorportation.com</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </footer>
-    </div>
+        </footer>
+      </div>
+    </Router>
   );
 }
 

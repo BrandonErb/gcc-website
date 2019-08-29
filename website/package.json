@@ -8,12 +8,14 @@
     "popper": "^1.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "deploy": "aws s3 sync build/ s3://gcc-website --acl public-read",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

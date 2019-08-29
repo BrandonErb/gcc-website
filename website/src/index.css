@@ -7,11 +7,43 @@
   height: auto;
 }
 
-.bg {
+.footer-logo {
+  max-width: 15%;
+  height: auto;
+}
+
+.bg-banner {
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
    background-image: url('./images/space_background.jpg');
+}
+
+.bg-about {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-about-box {
+  background-color: #00111a;
+  color: #f2f2f2;
+}
+
+.bg-farming {
+  background-image: url('./images/farming.jpg');
+}
+
+.bg-explore {
+  background-image: url('./images/exploration.jpg');
+}
+
+.bg-trade {
+  background-image: url('./images/trade.jpg');
+}
+
+.bg-wealth {
+  background-image: url('./images/wealth.jpg');
 }
 
 .bgc {
@@ -46,7 +78,7 @@
 }
 
 .site-header {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
