@@ -23,11 +23,11 @@ function App() {
         <Route path="/catalogue/" exact component={Main} />
         <footer className="container py-5 bgc">
           <div className="row">
-            <div className="col-6 col-md">
+            <div className="col-6">
               <img src={emblem} className="footer-logo" alt="Emblem"/>
               <small className="d-block mb-3 text-muted">© 2019</small>
             </div>
-            <div className="col-6 col-md">
+            <div className="col-6">
               <h5 className="text-muted">Contact</h5>
               <ul className="list-unstyled text-small">
                 <li><a className="text-muted" href="#">service@galacticcommercecorportation.com</a></li>
