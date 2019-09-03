@@ -1,0 +1,26 @@
+.cat-div {
+  min-height: 650px;
+}
+
+.cat-table {
+  white-space: nowrap;
+  background-color: #15151500;
+  overflow: hidden;
+}
+
+.title {
+  color: #f7f7f7;
+}
+
+.thumbnail {
+  width: 40%;
+  height: auto;
+}
+
+.img-col {
+  width: 20%;
+}
+
+.key-col {
+  width: 15%;
+}

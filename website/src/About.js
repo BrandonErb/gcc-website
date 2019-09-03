@@ -20,8 +20,8 @@ class About extends React.Component{
           </div>
         </div>
         <div>
-          <div className="position-relative overflow-hidden mx-auto p-3 p-lg-5 m-lg-3">
-            <div className="col-lg-8 mx-auto rounded bg-about-box my-lg-8 p-lg-5">
+          <div className="position-relative overflow-hidden mx-auto p-3 p-lg-5 m-lg-3 bg-about bg-about-img">
+            <div className="col-lg-7 mx-auto rounded-lg bg-about-box my-lg-7 p-lg-5">
               <h1 className="display-4 font-weight-normal">About</h1>
               <p className="lead font-weight-normal">
               The Galactic Commerce Corporation provides wealth services to clients across the Euclid galaxy.
@@ -31,7 +31,7 @@ class About extends React.Component{
             </div>
           </div>
           <div className="position-relative overflow-hidden p-3 p-lg-5 m-lg-3 bg-about bg-farming">
-            <div className="col-lg-5 p-lg-5 m-5 float-left bg-about-box rounded">
+            <div className="col-lg-5 p-lg-5 m-5 float-left bg-about-box rounded-lg">
               <h1 className="display-4 font-weight-normal">Farming</h1>
               <p className="lead font-weight-normal">
               Farms have been constructed by the Galactic Commerce Corporation and are available for clients.
@@ -40,7 +40,7 @@ class About extends React.Component{
             </div>
           </div>
           <div className="position-relative overflow-hidden p-3 p-lg-5 m-lg-3 bg-about bg-explore">
-            <div className="col-lg-5 p-lg-5 m-5 float-right bg-about-box rounded">
+            <div className="col-lg-5 p-lg-5 m-5 float-right bg-about-box rounded-lg">
               <h1 className="display-4 font-weight-normal">Exploration</h1>
               <p className="lead font-weight-normal">
               Members and associates are encouraged to explore together to the far reaches of the Euclid galaxy
@@ -50,7 +50,7 @@ class About extends React.Component{
             </div>
           </div>
           <div className="position-relative overflow-hidden p-3 p-lg-5 m-lg-3 bg-about bg-trade">
-            <div className="col-lg-5 p-lg-5 m-5 float-left bg-about-box rounded">
+            <div className="col-lg-5 p-lg-5 m-5 float-left bg-about-box rounded-lg">
               <h1 className="display-4 font-weight-normal">Trade</h1>
               <p className="lead font-weight-normal">
               The corporation trades resources with clients, this include raw resources, trade items, and upgrade modules.
@@ -59,7 +59,7 @@ class About extends React.Component{
             </div>
           </div>
           <div className="position-relative overflow-hidden p-3 p-lg-5 m-lg-3 bg-about bg-wealth">
-            <div className="col-lg-5 p-lg-5 m-5 float-right bg-about-box rounded">
+            <div className="col-lg-5 p-lg-5 m-5 float-right bg-about-box rounded-lg">
               <h1 className="display-4 font-weight-normal">Wealth</h1>
               <p className="lead font-weight-normal">
                 The ultimate end goal is to provide wealth to everyone involved.

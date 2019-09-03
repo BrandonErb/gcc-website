@@ -7,6 +7,7 @@ import './index.css'
 import emblem from './images/GCC_Emblem.png'
 import Main from './Main'
 import About from './About'
+import Catalogue from './Catalogue'
 
 function App() {
   return (
@@ -16,12 +17,12 @@ function App() {
           <div className="container d-flex flex-column flex-md-row justify-content-around">
             <Link className="py-2" to="/">Home</Link>
             <Link className="py-2" to="/about/">About</Link>
-            <Link className="py-2" to="#">Catalogue</Link>
+            <Link className="py-2" to="/catalogue/">Catalogue</Link>
           </div>
         </nav>
         <Route path="/" exact component={Main} />
         <Route path="/about/" exact component={About} />
-        <Route path="/catalogue/" exact component={Main} />
+        <Route path="/catalogue/" exact component={Catalogue} />
         <footer className="container py-5 bgc">
           <div className="row">
             <div className="col-6">
