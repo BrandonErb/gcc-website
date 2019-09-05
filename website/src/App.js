@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './stylesheets/open-iconic-bootstrap.css'
 import './index.css'
 import emblem from './images/GCC_Emblem.png'
 import Main from './Main'
 import About from './About'
 import Catalogue from './Catalogue'
+import ScrollToTop from './ScrollToTop'
 
 function App() {
   return (
@@ -20,9 +22,11 @@ function App() {
             <Link className="py-2" to="/catalogue/">Catalogue</Link>
           </div>
         </nav>
-        <Route path="/" exact component={Main} />
-        <Route path="/about/" exact component={About} />
-        <Route path="/catalogue/" exact component={Catalogue} />
+        <ScrollToTop>
+          <Route path="/" exact component={Main} />
+          <Route path="/about/" exact component={About} />
+          <Route path="/catalogue/" exact component={Catalogue} />
+        </ScrollToTop>
         <footer className="container py-5 bgc">
           <div className="row">
             <div className="col-6">

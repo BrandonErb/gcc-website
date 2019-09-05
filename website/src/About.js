@@ -9,12 +9,12 @@ class About extends React.Component{
       <div>
         <div className="bg-banner container-fluid">
           <div className="row">
-            <div className="col-lg-3 py-1 d-flex justify-content-end align-items-center">
+            <div className="col-md-3 d-flex justify-content-end">
               <a>
-                <img src={emblem} className="img-logo" alt="Emblem"/>
+                <img src={emblem} className="img-logo p-1" alt="Emblem"/>
               </a>
             </div>
-            <div className="col-lg d-flex justify-content-start align-items-center">
+            <div className="col-md-9 align-self-center ">
               <h1 className="header-title">Galactic Commerce Corporation</h1>
             </div>
           </div>
