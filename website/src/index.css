@@ -1,9 +1,6 @@
-.container {
-  max-width: 960px;
-}
-
 .img-logo {
-  max-width: 40%;
+  max-width: 13%;
+  min-width: 10%;
   height: auto;
 }
 
@@ -116,6 +113,22 @@
     flex: 1;
   }
 }
+
+/* Extra small devices (phones, up to 480px) */
+@media (max-width: @screen-xs-max) {
+  h1 {font-size: 1.25rem !important;}
+  h2 {font-size: 1.0rem !important;}
+  display-3 {font-size: 2.25rem !important;}
+  display-4 {font-size: 1.75rem !important;}
+}
+/* Small devices (tablets, 768px and up)*/
+@media (min-width: @screen-sm-min) {
+  h1 {font-size: 1.9rem !important;}
+  h2 {font-size: 1.5rem !important;}
+  display-3 {font-size: 3.35rem !important;}
+  display-4 {font-size: 2.6rem !important;}
+}
+
 
 @font-face {
   font-family: xolonium;

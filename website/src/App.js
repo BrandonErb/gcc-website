@@ -1,9 +1,10 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import './App.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './stylesheets/open-iconic-bootstrap.css'
+import 'bootstrap/scss/bootstrap.scss'
+import './App.css'
 import './index.css'
 import emblem from './images/GCC_Emblem.png'
 import Main from './Main'
@@ -14,7 +15,7 @@ import ScrollToTop from './ScrollToTop'
 function App() {
   return (
     <Router>
-      <div className="App bgc">
+      <div className="App bgc app-div">
         <nav className="site-header sticky-top mx-auto">
           <div className="container d-flex flex-column flex-md-row justify-content-around">
             <Link className="py-2" to="/">Home</Link>
@@ -35,7 +36,7 @@ function App() {
             </div>
             <div className="col-6">
               <h5 className="text-muted">Contact</h5>
-              <ul className="list-unstyled text-small">
+              <ul className="list-unstyled text-small text-truncate">
                 <li><a className="text-muted" href="#">service@galacticcommercecorportation.com</a></li>
               </ul>
             </div>

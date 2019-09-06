@@ -1,9 +1,10 @@
 import React from 'react'
 import ModalImage from "react-modal-image"
-import emblem from './images/GCC_Emblem.png'
 import './index.css'
+import 'bootstrap/scss/bootstrap.scss'
 import './stylesheets/open-iconic-bootstrap.css'
 import './catalogue.css'
+import Banner from './Banner'
 
 class Catalogue extends React.Component {
   constructor(props){
@@ -24,26 +25,15 @@ class Catalogue extends React.Component {
   render() {
     return (
       <div>
-        <div className="bg-banner container-fluid">
-          <div className="row">
-            <div className="col-md-3 d-flex justify-content-end">
-              <a>
-                <img src={emblem} className="img-logo p-1" alt="Emblem"/>
-              </a>
-            </div>
-            <div className="col-md-9 align-self-center ">
-              <h1 className="header-title">Galactic Commerce Corporation</h1>
-            </div>
-          </div>
-        </div>
+        <Banner/>
         <div className="p-3 cat-div">
           <div className="input-group col-md-3 ml-auto my-1 p-0">
             <div className="input-group-prepend">
-              <span class="input-group-text" id="Filter">
+              <span className="input-group-text" id="Filter">
                 <span className="oi oi-magnifying-glass"></span>
               </span>
             </div>
-            <input type="text" className="form-control" placeholder="Filter" aria-label="Filter" aria-describedby="filter-search" disabled="true"/>
+            <input type="text" className="form-control" placeholder="Filter" aria-label="Filter" aria-describedby="filter-search" disabled={true}/>
           </div>
           <div>
             <h2 className="title font-weight-normal mb-3">Starships</h2>

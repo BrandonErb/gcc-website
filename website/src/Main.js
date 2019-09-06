@@ -1,5 +1,6 @@
 import React from 'react'
 import backgroundVideo from './video/video_hauler.mp4'
+import './index.css'
 
 class Main extends React.Component{
   render() {

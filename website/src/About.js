@@ -1,24 +1,13 @@
 import React from 'react'
-import emblem from './images/GCC_Emblem.png'
 import 'bootstrap/scss/bootstrap.scss'
-
+import './index.css'
+import Banner from './Banner'
 
 class About extends React.Component{
   render() {
     return (
       <div>
-        <div className="bg-banner container-fluid">
-          <div className="row">
-            <div className="col-md-3 d-flex justify-content-end">
-              <a>
-                <img src={emblem} className="img-logo p-1" alt="Emblem"/>
-              </a>
-            </div>
-            <div className="col-md-9 align-self-center ">
-              <h1 className="header-title">Galactic Commerce Corporation</h1>
-            </div>
-          </div>
-        </div>
+        <Banner/>
         <div>
           <div className="position-relative overflow-hidden mx-auto p-3 p-lg-5 m-lg-3 bg-about bg-about-img">
             <div className="col-lg-7 mx-auto rounded-lg bg-about-box my-lg-7 p-lg-5">
@@ -31,7 +20,7 @@ class About extends React.Component{
             </div>
           </div>
           <div className="position-relative overflow-hidden p-3 p-lg-5 m-lg-3 bg-about bg-farming">
-            <div className="col-lg-5 p-lg-5 m-5 float-left bg-about-box rounded-lg">
+            <div className="col-lg-5 p-lg-5 m-lg-5 m-md-3 m-sm-1 m-xs-1 float-left bg-about-box rounded-lg ml-sm-1">
               <h1 className="display-4 font-weight-normal">Farming</h1>
               <p className="lead font-weight-normal">
               Farms have been constructed by the Galactic Commerce Corporation and are available for clients.
@@ -40,7 +29,7 @@ class About extends React.Component{
             </div>
           </div>
           <div className="position-relative overflow-hidden p-3 p-lg-5 m-lg-3 bg-about bg-explore">
-            <div className="col-lg-5 p-lg-5 m-5 float-right bg-about-box rounded-lg">
+            <div className="col-lg-5 p-lg-5 m-lg-5 m-md-3 m-sm-1 m-xs-1 float-right bg-about-box rounded-lg mr-sm-1">
               <h1 className="display-4 font-weight-normal">Exploration</h1>
               <p className="lead font-weight-normal">
               Members and associates are encouraged to explore together to the far reaches of the Euclid galaxy
@@ -50,7 +39,7 @@ class About extends React.Component{
             </div>
           </div>
           <div className="position-relative overflow-hidden p-3 p-lg-5 m-lg-3 bg-about bg-trade">
-            <div className="col-lg-5 p-lg-5 m-5 float-left bg-about-box rounded-lg">
+            <div className="col-lg-5 p-lg-5 m-lg-5 m-md-3 m-sm-1 m-xs-1 float-left bg-about-box rounded-lg ml-sm-1">
               <h1 className="display-4 font-weight-normal">Trade</h1>
               <p className="lead font-weight-normal">
               The corporation trades resources with clients, this include raw resources, trade items, and upgrade modules.
@@ -59,7 +48,7 @@ class About extends React.Component{
             </div>
           </div>
           <div className="position-relative overflow-hidden p-3 p-lg-5 m-lg-3 bg-about bg-wealth">
-            <div className="col-lg-5 p-lg-5 m-5 float-right bg-about-box rounded-lg">
+            <div className="col-lg-5 p-lg-5 m-lg-5 m-md-3 m-sm-1 m-xs-1 float-right bg-about-box rounded-lg">
               <h1 className="display-4 font-weight-normal">Wealth</h1>
               <p className="lead font-weight-normal">
                 The ultimate end goal is to provide wealth to everyone involved.
