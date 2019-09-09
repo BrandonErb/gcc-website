@@ -1,8 +1,6 @@
 import React from 'react'
 import ModalImage from "react-modal-image"
 import './index.css'
-import 'bootstrap/scss/bootstrap.scss'
-import './stylesheets/open-iconic-bootstrap.css'
 import './catalogue.css'
 import Banner from './Banner'
 
@@ -36,7 +34,7 @@ class Catalogue extends React.Component {
             <input type="text" className="form-control" placeholder="Filter" aria-label="Filter" aria-describedby="filter-search" disabled={true}/>
           </div>
           <div>
-            <h2 className="title font-weight-normal mb-3">Starships</h2>
+            <h2 className="title font-weight-normal mb-3 text-responsive">Starships</h2>
             <div className="table-responsive">
               <table className="table table-dark table-bordered cat-table">
                 <thead>
@@ -59,7 +57,7 @@ class Catalogue extends React.Component {
             </div>
           </div>
           <div className="mt-4">
-            <h2 className="title font-weight-normal mb-3">Freighters</h2>
+            <h2 className="title font-weight-normal mb-3 text-responsive">Freighters</h2>
             <div className="table-responsive">
               <table className="table table-dark table-bordered cat-table">
                 <thead>
@@ -82,7 +80,7 @@ class Catalogue extends React.Component {
             </div>
           </div>
           <div className="mt-4">
-            <h2 className="title font-weight-normal mb-3">Multi-Tools</h2>
+            <h2 className="title font-weight-normal mb-3 text-responsive">Multi-Tools</h2>
             <div className="table-responsive">
               <table className="table table-dark table-bordered cat-table">
                 <thead>

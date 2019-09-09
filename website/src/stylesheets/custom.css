@@ -1,0 +1,56 @@
+
+p {font-size: 0.8rem;}
+body {font-size: 0.8rem}
+h1 {font-size:1.5rem;}
+h2 {font-size:1.2rem;}
+.display-2 {font-size:2.0rem;}
+.display-3 {font-size:1.9rem;}
+.display-4 {font-size:1.75rem;}
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+
+/* Small devices (landscape phones, 544px and up)*/
+@media (min-width: 544px) {
+  p {font-size: 1rem;}
+  body {font-size: 1rem}
+  h1 {font-size:1.9rem;}
+  h2 {font-size:1.5rem;}
+  .display-2 {font-size:2.5rem;}
+  .display-3 {font-size:2.8rem;}
+  .display-4 {font-size:2.6rem;}
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  p {font-size: 1rem;}
+  body {font-size: 1rem}
+  h1 {font-size:2.1rem;}
+  h2 {font-size:1.75rem;}
+  .display-2 {font-size:3.0rem;}
+  .display-3 {font-size:3.25rem;}
+  .display-4 {font-size:3.0rem;}
+
+  .flex-md-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  p {font-size: 1rem;}
+    body {font-size: 1rem}
+  h1 {font-size:2.5rem;}
+  h2 {font-size:2rem;}
+  .display-2 {font-size:4.5rem;}
+  .display-3 {font-size:4.5rem;}
+  .display-4 {font-size:3.5rem;}
+}
+
+.flex-equal > * {
+  -ms-flex: 1;
+  flex: 1;
+}
