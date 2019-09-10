@@ -11,7 +11,7 @@ class About extends React.Component{
           <div className="position-relative overflow-hidden mx-auto p-3 p-lg-5 m-lg-3 bg-about bg-about-img">
             <div className="col-lg-7 mx-auto rounded-lg bg-about-box my-lg-7 p-lg-5">
               <h1 className="display-4 font-weight-normal text-responsive">About</h1>
-              <p className=" font-weight-normal">
+              <p className="font-weight-normal">
               The Galactic Commerce Corporation provides wealth services to clients across the Euclid galaxy.
               Clients have access to farms, ships, multi-tools, and mining bases marketed by the corporation,
               as well as arranging exchanges of resources between clients.
