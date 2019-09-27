@@ -64,3 +64,27 @@ typings/
 *.webm
 
 website/build/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+webservice/gcc-webservice/gcc_env/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+gcc-webservice/.vs/gcc-webservice/v15/.suo
+gcc-webservice/gcc-webservice/gcc-webservice.pyproj.user
+gcc-webservice/gcc-webservice/gcc-webservice.pyproj
+gcc-webservice/gcc-webservice/config.py
+*.sln
+*.suo
