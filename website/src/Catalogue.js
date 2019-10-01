@@ -9,7 +9,7 @@ class Catalogue extends React.Component {
     super(props) //since we are extending class Table so we have to use super in order to override Component class constructor
     this.state = {
       starships: [
-        { id: 1000, image:"/1000.jpg", name: 'Parallax Wings OI8', system:'Terisaire-GCC', address: '0FE3:0005:0FFD:01FD', sClass:'A', slots:'38(12)', type:'fighter', area:'FDI', bonus: {damage: '-', shield: '-', hyperdrive: '-' }}
+        { id: 1000, image:"https://gcc-images.s3.amazonaws.com/starships/Parallax_Wings_OI8.jpg", name: 'Parallax Wings OI8', system:'Terisaire-GCC', address: '0FE3:0005:0FFD:01FD', sClass:'A', slots:'38(12)', type:'fighter', area:'FDI', bonus: {damage: '-', shield: '-', hyperdrive: '-' }}
       ],
       freighters: [
         { id: 1001, image:"/1001.jpg", name: 'Isesakai', system:'Hetbuinka', address: '09E3:007C:0E1F:0001', fClass:'A', slots:'20(4)', type:'freighter', area:'unknown', bonus: {hyperdrive: '-' }}
