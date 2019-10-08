@@ -12,10 +12,10 @@ class Catalogue extends React.Component {
         { id: 1000, image:"https://gcc-images.s3.amazonaws.com/starships/Parallax_Wings_OI8.jpg", name: 'Parallax Wings OI8', system:'Terisaire-GCC', address: '0FE3:0005:0FFD:01FD', sClass:'A', slots:'38(12)', type:'fighter', area:'FDI', bonus: {damage: '-', shield: '-', hyperdrive: '-' }}
       ],
       freighters: [
-        { id: 1001, image:"/1001.jpg", name: 'Isesakai', system:'Hetbuinka', address: '09E3:007C:0E1F:0001', fClass:'A', slots:'20(4)', type:'freighter', area:'unknown', bonus: {hyperdrive: '-' }}
+        { id: 1001, image:"https://gcc-images.s3.amazonaws.com/freighters/Isesakai.jpg", name: 'Isesakai', system:'Hetbuinka', address: '09E3:007C:0E1F:0001', fClass:'A', slots:'20(4)', type:'freighter', area:'unknown', bonus: {hyperdrive: '-' }}
       ],
       multitools: [
-        { id: 1002, image:"/1002.jpg", name: 'Return of Silence', system:'Algovi IV', planet:'Smeyarch Mich', coords: {x: '', y: ''}, address: '09D2:0081:0E19:00B7', mClass:'S', slots:'24', type:'rifle', area:'unknown', bonus: {damage: '-', mining: '-', scanner: '-' }}
+        { id: 1002, image:"https://gcc-images.s3.amazonaws.com/multitools/Return_of_Silence.jpg", name: 'Return of Silence', system:'Algovi IV', planet:'Smeyarch Mich', coords: {x: '', y: ''}, address: '09D2:0081:0E19:00B7', mClass:'S', slots:'24', type:'rifle', area:'unknown', bonus: {damage: '-', mining: '-', scanner: '-' }}
       ]
     }
   }
@@ -117,8 +117,8 @@ class Catalogue extends React.Component {
               <td className="img-col p-1">
                 <ModalImage
                   className="thumbnail"
-                  small={window.location.origin + image}
-                  large={window.location.origin + image}
+                  small={image}
+                  large={image}
                   hideDownload={true}
                   hideZoom={true}
                   alt="thumbnail"
@@ -151,8 +151,8 @@ class Catalogue extends React.Component {
               <td className="img-col p-1">
                 <ModalImage
                   className="thumbnail"
-                  small={window.location.origin + image}
-                  large={window.location.origin + image}
+                  small={image}
+                  large={image}
                   hideDownload={true}
                   hideZoom={true}
                   alt="thumbnail"
@@ -183,8 +183,8 @@ class Catalogue extends React.Component {
               <td className="img-col p-1">
                 <ModalImage
                   className="thumbnail"
-                  small={window.location.origin + image}
-                  large={window.location.origin + image}
+                  small={image}
+                  large={image}
                   hideDownload={true}
                   hideZoom={true}
                   alt="thumbnail"
