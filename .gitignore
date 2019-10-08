@@ -82,9 +82,10 @@ webservice/gcc-webservice/gcc_env/
 pip-log.txt
 pip-delete-this-directory.txt
 
-gcc-webservice/.vs/gcc-webservice/v15/.suo
-gcc-webservice/gcc-webservice/gcc-webservice.pyproj.user
-gcc-webservice/gcc-webservice/gcc-webservice.pyproj
-gcc-webservice/gcc-webservice/config.py
+webservice/.vs/gcc-webservice/v15/.suo
+webservice/gcc-webservice/gcc-webservice.pyproj.user
+webservice/gcc-webservice/gcc-webservice.pyproj
+webservice/gcc-webservice/config.py
 *.sln
 *.suo
+
