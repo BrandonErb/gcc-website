@@ -59,8 +59,8 @@ def update_starship():
         
 @app.route('/ship/delete/<id>', methods=['DELETE'])
 def delete_ship(id):
-    mongo.db.user.delete_one({'_id': ObjectId(id)})
-    resp = jsonify('User deleted successfully!')
+    mongo.db.starships.delete_one({'_id': ObjectId(id)})
+    resp = jsonify('Ship deleted successfully!')
     resp.status_code = 200
     return resp
         

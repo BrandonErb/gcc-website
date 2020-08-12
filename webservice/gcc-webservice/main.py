@@ -1,5 +1,7 @@
 from app import app, mongo
 import starshiproutes
+#import routes
+from routes import *
 from os import environ
 
 if __name__ == '__main__':
