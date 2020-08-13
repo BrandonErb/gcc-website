@@ -3,21 +3,35 @@ import ModalImage from "react-modal-image"
 import './index.css'
 import './catalogue.css'
 import Banner from './Banner'
+import axios from 'axios'
 
 class Catalogue extends React.Component {
   constructor(props){
     super(props) //since we are extending class Table so we have to use super in order to override Component class constructor
     this.state = {
-      starships: [
-        { id: 1000, image:"https://gcc-images.s3.amazonaws.com/starships/Parallax_Wings_OI8.jpg", name: 'Parallax Wings OI8', system:'Terisaire-GCC', address: '0FE3:0005:0FFD:01FD', sClass:'A', slots:'38(12)', type:'fighter', area:'FDI', bonus: {damage: '-', shield: '-', hyperdrive: '-' }}
-      ],
-      freighters: [
-        { id: 1001, image:"https://gcc-images.s3.amazonaws.com/freighters/Isesakai.jpg", name: 'Isesakai', system:'Hetbuinka', address: '09E3:007C:0E1F:0001', fClass:'A', slots:'20(4)', type:'freighter', area:'unknown', bonus: {hyperdrive: '-' }}
-      ],
-      multitools: [
-        { id: 1002, image:"https://gcc-images.s3.amazonaws.com/multitools/Return_of_Silence.jpg", name: 'Return of Silence', system:'Algovi IV', planet:'Smeyarch Mich', coords: {x: '', y: ''}, address: '09D2:0081:0E19:00B7', mClass:'S', slots:'24', type:'rifle', area:'unknown', bonus: {damage: '-', mining: '-', scanner: '-' }}
-      ]
+      starships: [],
+      freighters: [],
+      multitools: []
     }
+  }
+
+  componentDidMount() {
+      const GetShips = axios.get(`http://localhost:5000/ships`)
+                          .then (res => {
+                            const starships = res.data;
+                            this.setState({starships});
+                          });
+      const GetFreighters =  axios.get(`http://localhost:5000/freighters`)
+                                .then ( res => {
+                                  const freighters = res.data;
+                                  this.setState({freighters});
+                                });
+      const GetMultitools = axios.get(`http://localhost:5000/multitools`)
+                                .then(res => {
+                                  const multitools = res.data;
+                                  this.setState({multitools});
+                                });
+      Promise.all( [GetShips, GetFreighters, GetMultitools] );
   }
 
   render() {
@@ -47,7 +61,6 @@ class Catalogue extends React.Component {
                     <th scope="col">Area</th>
                     <th scope="col">Class</th>
                     <th scope="col">Slots</th>
-                    <th scope="col">Bonuses</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -70,7 +83,6 @@ class Catalogue extends React.Component {
                     <th scope="col">Area</th>
                     <th scope="col">Class</th>
                     <th scope="col">Slots</th>
-                    <th scope="col">Bonuses</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -95,7 +107,6 @@ class Catalogue extends React.Component {
                     <th scope="col">Area</th>
                     <th scope="col">Class</th>
                     <th scope="col">Slots</th>
-                    <th scope="col">Bonuses</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -111,14 +122,14 @@ class Catalogue extends React.Component {
 
   RenderStarshipTable () {
     return this.state.starships.map((ship, index) => {
-         const { id, image, name, type, system, address, area, sClass, slots, bonus} = ship //destructuring
+         const { id, image_url, name, type, system, address, area, sClass, slots} = ship //destructuring
          return (
           <tr key={id}>
               <td className="img-col p-1">
                 <ModalImage
                   className="thumbnail"
-                  small={image}
-                  large={image}
+                  small={image_url}
+                  large={image_url}
                   hideDownload={true}
                   hideZoom={true}
                   alt="thumbnail"
@@ -131,13 +142,6 @@ class Catalogue extends React.Component {
               <td>{area}</td>
               <td>{sClass}</td>
               <td>{slots}</td>
-              <td className="align-middle">
-                <div>
-                  <div className="row bonus-row">Damage: {bonus.damage}</div>
-                  <div className="row bonus-row">Shield: {bonus.shield}</div>
-                  <div className="row bonus-row">Hyperdrive: {bonus.hyperdrive}</div>
-                </div>
-              </td>
             </tr>
          )
       })
@@ -145,14 +149,14 @@ class Catalogue extends React.Component {
 
   RenderFreighterTable () {
     return this.state.freighters.map((freighter, index) => {
-         const { id, image, name, type, system, address, area, fClass, slots, bonus} = freighter //destructuring
+         const { id, image_url, name, type, system, address, area, fClass, slots} = freighter //destructuring
          return (
           <tr key={id}>
               <td className="img-col p-1">
                 <ModalImage
                   className="thumbnail"
-                  small={image}
-                  large={image}
+                  small={image_url}
+                  large={image_url}
                   hideDownload={true}
                   hideZoom={true}
                   alt="thumbnail"
@@ -165,11 +169,6 @@ class Catalogue extends React.Component {
               <td>{area}</td>
               <td>{fClass}</td>
               <td>{slots}</td>
-              <td className="align-middle">
-                <div>
-                  <div className="row bonus-row">Hyperdrive: {bonus.hyperdrive}</div>
-                </div>
-              </td>
             </tr>
          )
       })
@@ -177,14 +176,14 @@ class Catalogue extends React.Component {
 
   RenderMultiToolTable () {
     return this.state.multitools.map((multitool, index) => {
-         const { id, image, name, type, system, planet, coords, address, area, mClass, slots, bonus} = multitool //destructuring
+         const { id, image_url, name, type, system, planet, coords, address, area, mClass, slots} = multitool //destructuring
          return (
           <tr key={id}>
               <td className="img-col p-1">
                 <ModalImage
                   className="thumbnail"
-                  small={image}
-                  large={image}
+                  small={image_url}
+                  large={image_url}
                   hideDownload={true}
                   hideZoom={true}
                   alt="thumbnail"
@@ -204,13 +203,6 @@ class Catalogue extends React.Component {
               <td>{area}</td>
               <td>{mClass}</td>
               <td>{slots}</td>
-              <td className="align-middle">
-                <div>
-                  <div className="row bonus-row">Damage: {bonus.damage}</div>
-                  <div className="row bonus-row">Mining: {bonus.mining}</div>
-                  <div className="row bonus-row">Scanner: {bonus.scanner}</div>
-                </div>
-              </td>
             </tr>
          )
       })

@@ -16,12 +16,12 @@ def add_multitool():
     _coords = _json['coords']
     _address = _json['address']
     _area = _json['area']
-    _tool_class = _json['class']
+    _tool_class = _json['tClass']
     _slots = _json['slots']
     # validate the received values
     if request.method == 'POST': 
         # save details
-        mongo.db.multitools.insert({'name': _name, 'type': _type, 'image_url': _image_url, 'system': _system, 'planet': _planet, 'coords': _coords, 'address': _address, 'area': _area, 'class': _tool_class, 'slots': _slots})
+        mongo.db.multitools.insert({'name': _name, 'type': _type, 'image_url': _image_url, 'system': _system, 'planet': _planet, 'coords': _coords, 'address': _address, 'area': _area, 'tClass': _tool_class, 'slots': _slots})
         resp = jsonify('Multitool added successfully')
         resp.status_code = 200
         return resp
@@ -53,9 +53,9 @@ def update_multitool():
     _coords = _json['coords']
     _address = _json['address']
     _area = _json['area']
-    _tool_class = _json['class']
+    _tool_class = _json['tClass']
     _slots = _json['slots']
-    mongo.db.multitools.update_one({'name': _name}, {'$set': {'type': _type, 'image_url': _image_url, 'system': _system, 'planet': _planet, 'coords': _coords, 'address': _address, 'area': _area, 'class': _tool_class, 'slots': _slots}})
+    mongo.db.multitools.update_one({'name': _name}, {'$set': {'type': _type, 'image_url': _image_url, 'system': _system, 'planet': _planet, 'coords': _coords, 'address': _address, 'area': _area, 'tClass': _tool_class, 'slots': _slots}})
     resp = jsonify('Multitool updated successfully')
     resp.status_code = 200
     return resp

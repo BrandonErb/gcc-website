@@ -8,19 +8,18 @@ from flask import jsonify, request
 @app.route('/ship/add', methods=['POST'])
 def add_ship():
     _json = request.json
-    #_id = _json['_id']
     _name = _json['name']
     _type = _json['type']
     _image_url = _json['image_url']
     _system = _json['system']
     _address = _json['address']
     _area = _json['area']
-    _ship_class = _json['class']
+    _ship_class = _json['sClass']
     _slots = _json['slots']
     # validate the received values
     if request.method == 'POST': 
         # save details
-        mongo.db.starships.insert({'name': _name, 'type': _type, 'image_url': _image_url, 'system': _system, 'address': _address, 'area': _area, 'class': _ship_class, 'slots': _slots})
+        mongo.db.starships.insert({'name': _name, 'type': _type, 'image_url': _image_url, 'system': _system, 'address': _address, 'area': _area, 'sClass': _ship_class, 'slots': _slots})
         resp = jsonify('Ship added successfully')
         resp.status_code = 200
         return resp
@@ -50,9 +49,9 @@ def update_starship():
     _system = _json['system']
     _address = _json['address']
     _area = _json['area']
-    _ship_class = _json['class']
+    _ship_class = _json['sClass']
     _slots = _json['slots']
-    mongo.db.starships.update_one({'name': _name}, {'$set': {'type': _type, 'image_url': _image_url, 'system': _system, 'address': _address, 'area': _area, 'class': _ship_class, 'slots': _slots}})
+    mongo.db.starships.update_one({'name': _name}, {'$set': {'type': _type, 'image_url': _image_url, 'system': _system, 'address': _address, 'area': _area, 'sClass': _ship_class, 'slots': _slots}})
     resp = jsonify('Ship updated successfully')
     resp.status_code = 200
     return resp
