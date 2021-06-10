@@ -15,18 +15,23 @@ class Catalogue extends React.Component {
     }
   }
 
+  //const exUri = 'ec2-34-238-122-74.compute-1.amazonaws.com'
+
   componentDidMount() {
-      const GetShips = axios.get(`http://localhost:5000/ships`)
+      //const GetShips = axios.get(`http://localhost:5000/ships`)
+      const GetShips = axios.get(`https://gcc-webservice.herokuapp.com/ships`)
                           .then (res => {
                             const starships = res.data;
                             this.setState({starships});
                           });
-      const GetFreighters =  axios.get(`http://localhost:5000/freighters`)
+      //const GetFreighters =  axios.get(`http://localhost:5000/freighters`)
+      const GetFreighters =  axios.get(`https://gcc-webservice.herokuapp.com/freighters`)
                                 .then ( res => {
                                   const freighters = res.data;
                                   this.setState({freighters});
                                 });
-      const GetMultitools = axios.get(`http://localhost:5000/multitools`)
+      //const GetMultitools = axios.get(`http://localhost:5000/multitools`)
+      const GetMultitools = axios.get(`https://gcc-webservice.herokuapp.com/multitools`)
                                 .then(res => {
                                   const multitools = res.data;
                                   this.setState({multitools});
